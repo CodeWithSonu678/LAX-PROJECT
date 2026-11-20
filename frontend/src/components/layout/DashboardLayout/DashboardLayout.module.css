@@ -1,0 +1,21 @@
+.dashboardLayout {
+  min-height: 100vh;
+  display: flex;
+  background: #070711;
+  color: #fff;
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  margin-left: 220px;
+  padding: 35px 40px;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    padding: 85px 18px 25px;
+  }
+}

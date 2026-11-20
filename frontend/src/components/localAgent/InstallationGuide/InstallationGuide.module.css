@@ -1,0 +1,418 @@
+.guideCard {
+  width: 100%;
+  padding: 22px;
+  background: #111123;
+  border: 1px solid #382557;
+  border-radius: 17px;
+}
+
+/* Header */
+
+.guideHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 23px;
+}
+
+.guideHeader > svg {
+  color: #b765ff;
+  flex-shrink: 0;
+}
+
+.guideHeader h2 {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.guideHeader p {
+  margin-top: 5px;
+  color: #b6b3cc;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Main Content */
+
+.guideContent {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  min-height: 400px;
+}
+
+/* Step Navigation */
+
+.stepNavigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  height: 100%;
+  padding: 5px 0;
+}
+
+.stepNavigation::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  bottom: 28px;
+  left: 21px;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    #a64cff,
+    #382454
+  );
+}
+
+.stepButton {
+  width: 100%;
+  flex: 1;
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 8px 12px;
+
+  position: relative;
+  z-index: 1;
+
+  color: #ddd9ed;
+  background: #111123;
+  border: 1px solid #33234f;
+  border-radius: 14px;
+
+  text-align: left;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.stepNumber {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #fff;
+  background: #292044;
+  border: 1px solid #69508e;
+  border-radius: 50%;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.stepTitle {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.activeStep {
+  color: #fff;
+  background: linear-gradient(110deg, #8626e9, #4d168d);
+  border-color: #ac62ff;
+  box-shadow: 0 0 16px #7928ff40;
+}
+
+.activeStep .stepNumber {
+  color: #7928ff;
+  background: #fff;
+  border-color: #fff;
+}
+
+.completedStep .stepNumber {
+  color: #32e3a0;
+  background: #15382f;
+  border-color: #32e3a0;
+}
+
+/* Step Details */
+
+.stepDetails {
+  min-width: 0;
+  min-height: 200px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 22px;
+  position: relative;
+
+  background: #0d0d1d;
+  border: 1px solid #342652;
+  border-radius: 15px;
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+
+  color: #fff;
+  font-size: 11px;
+}
+
+.progress > span {
+  color: #c27bff;
+  font-weight: 800;
+}
+
+.progress > strong {
+  color: #c6c0dd;
+  font-weight: 500;
+}
+
+.progressDots {
+  display: flex;
+  gap: 6px;
+  margin-left: 7px;
+}
+
+.progressDots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #42365e;
+}
+
+.progressDots .filledDot {
+  background: #a64cff;
+  box-shadow: 0 0 7px #a64cff;
+}
+
+/* Detail Heading */
+
+.detailHeading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 5px;
+}
+
+.detailNumber {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+
+  color: #fff;
+  background: linear-gradient(135deg, #b23aff, #6419ed);
+  border-radius: 50%;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.detailHeading h3 {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.detailDescription {
+  max-width: 95%;
+  margin-top: 16px;
+  color: #e0dced;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Information Box */
+
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 17px;
+  padding: 13px;
+
+  background: #111a39;
+  border: 1px solid #3549b5;
+  border-radius: 12px;
+}
+
+.infoBox > svg {
+  color: #a65cff;
+  flex-shrink: 0;
+}
+
+.infoBox p {
+  color: #ddd9ef;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.infoBox strong {
+  display: block;
+  margin-top: 5px;
+  color: #fff;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+/* Visual */
+
+.stepVisual {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 13px;
+
+  background: linear-gradient(120deg, #19132e, #111123);
+  border: 1px solid #443066;
+  border-radius: 12px;
+}
+
+.visualIcon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+
+  color: #b56aff;
+  background: #281447;
+  border-radius: 12px;
+}
+
+.visualText span {
+  color: #a965ff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.visualText h4 {
+  margin-top: 4px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.visualText small {
+  display: block;
+  margin-top: 4px;
+  color: #9993b5;
+  font-size: 10px;
+}
+
+/* Actions */
+
+.stepActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  margin-top: auto;
+  padding-top: 20px;
+
+  border-top: 1px solid #29213f;
+}
+
+.previousButton,
+.nextButton {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 17px;
+
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.previousButton {
+  color: #c3b5e8;
+  background: #17142b;
+  border: 1px solid #57417f;
+}
+
+.nextButton {
+  color: #fff;
+  background: linear-gradient(110deg, #a52aff, #6a20f5);
+  border: none;
+  box-shadow: 0 0 13px #7928ff40;
+}
+
+.previousButton:hover:not(:disabled),
+.nextButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.previousButton:disabled,
+.nextButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .guideContent {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .stepButton {
+    padding: 5px 7px;
+    gap: 7px;
+  }
+
+  .stepTitle {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 600px) {
+  .guideCard {
+    padding: 15px;
+  }
+
+  .guideHeader h2 {
+    font-size: 19px;
+  }
+
+  .guideHeader p {
+    font-size: 11px;
+  }
+
+  .guideContent {
+    grid-template-columns: 1fr;
+  }
+
+  .stepNavigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stepNavigation::before {
+    display: none;
+  }
+
+  .stepButton {
+    min-height: 44px;
+  }
+
+  .stepDetails {
+    padding: 15px;
+  }
+
+  .detailHeading h3 {
+    font-size: 16px;
+  }
+}

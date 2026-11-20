@@ -1,0 +1,81 @@
+.info {
+  width: 100%;
+  max-width: 550px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 15px;
+
+  color: #bd83ff;
+  background: rgba(126, 34, 206, 0.13);
+  border: 1px solid rgba(147, 51, 234, 0.25);
+  border-radius: 30px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.info h2 {
+  margin-top: 22px;
+
+  color: #fff;
+  font-size: clamp(32px, 4vw, 43px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.info h2 span {
+  display: block;
+  color: #a855f7;
+}
+
+.description {
+  margin-top: 18px;
+
+  color: #a5a3b8;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  margin-top: 32px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #c084fc;
+  background: rgba(126, 34, 206, 0.15);
+  border: 1px solid rgba(147, 51, 234, 0.25);
+  border-radius: 13px;
+}
+
+.feature h3 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.feature p {
+  margin-top: 5px;
+  color: #9290aa;
+  font-size: 12px;
+  line-height: 1.5;
+}

@@ -1,0 +1,272 @@
+.formCard {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 30px;
+
+  background: #111123;
+  border: 1px solid #382557;
+  border-radius: 18px;
+}
+
+/* Header */
+
+.formHeader {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 30px;
+}
+
+.headerIcon {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #c17aff;
+  background: linear-gradient(135deg, #381665, #21113d);
+  border: 1px solid #6937a0;
+  border-radius: 15px;
+}
+
+.formHeader h2 {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.formHeader p {
+  margin-top: 7px;
+  color: #aaa7c3;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Form */
+
+.formGroup {
+  margin-bottom: 23px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 11px;
+
+  color: #eeeafa;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.formGroup label span {
+  margin-left: 5px;
+  color: #ff6d91;
+}
+
+.inputWrapper {
+  height: 53px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 16px;
+
+  background: #19182e;
+  border: 1px solid #393054;
+  border-radius: 11px;
+
+  transition: 0.25s;
+}
+
+.inputWrapper:focus-within {
+  border-color: #a44cff;
+  box-shadow: 0 0 14px #7928ff25;
+}
+
+.inputWrapper > svg {
+  flex-shrink: 0;
+  color: #ad79e9;
+}
+
+.inputWrapper input {
+  width: 100%;
+  height: 100%;
+
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  font-size: 13px;
+}
+
+.inputWrapper input::placeholder {
+  color: #77748f;
+}
+
+.visibilityButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #aaa2c5;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Error */
+
+.error {
+  display: block;
+  margin-top: 7px;
+  color: #ff718e;
+  font-size: 11px;
+}
+
+/* Info */
+
+.infoBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+
+  background: #171a37;
+  border: 1px solid #38458b;
+  border-radius: 11px;
+}
+
+.infoBox svg {
+  flex-shrink: 0;
+  color: #a77aff;
+}
+
+.infoBox p {
+  color: #c4c1dc;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Submit */
+
+.submitButton {
+  width: 100%;
+  height: 52px;
+  margin-top: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: #fff;
+  background: linear-gradient(110deg, #a52aff, #6820f5);
+  border: none;
+  border-radius: 11px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 0 18px #7928ff35;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px #7928ff65;
+}
+
+/* Security */
+
+.securityNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+
+  color: #a5a0bb;
+  font-size: 11px;
+}
+
+.securityNote svg {
+  color: #29d99b;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .formCard {
+    padding: 20px 16px;
+  }
+
+  .formHeader h2 {
+    font-size: 17px;
+  }
+
+  .formHeader p {
+    font-size: 11px;
+  }
+
+  .headerIcon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Main Card */
+
+.formCard {
+  width: 100%;
+  padding: 30px;
+  background: #111123;
+  border: 1px solid #30264f;
+  border-radius: 18px;
+}
+
+/* Two Column Layout */
+
+.formLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.8fr);
+  gap: 28px;
+  align-items: center;
+}
+
+/* Left Form */
+
+.formSection {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Right Guide */
+
+.guideSection {
+  min-width: 0;
+  padding-left: 28px;
+  border-left: 1px solid #30264f;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .formLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .guideSection {
+    padding: 25px 0 0;
+    border-left: none;
+    border-top: 1px solid #30264f;
+  }
+}
+
+@media (max-width: 600px) {
+  .formCard {
+    padding: 18px;
+  }
+}

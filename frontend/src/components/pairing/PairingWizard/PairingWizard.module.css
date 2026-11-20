@@ -1,0 +1,154 @@
+/* Main Wizard */
+
+.wizard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.stepWrapper {
+  min-width: 0;
+  width: 100%;
+  position: relative;
+}
+
+/* Individual Step */
+
+.step {
+  width: 100%;
+  min-height: 76px;
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  position: relative;
+
+  background: #17152b;
+  border: 1px solid #30264f;
+  border-radius: 13px;
+
+  transition: all 0.25s ease;
+}
+
+/* Step Icon */
+
+.stepIcon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #aaa0ca;
+  background: #292044;
+  border: 1px solid #51416f;
+  border-radius: 50%;
+}
+
+.stepInfo {
+  min-width: 0;
+}
+
+.stepInfo span {
+  display: block;
+
+  color: #88819f;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.stepInfo h3 {
+  margin-top: 5px;
+
+  color: #d8d4e8;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Active Step */
+
+.active {
+  background: linear-gradient(120deg, #36145e, #24123e);
+  border-color: #a34cff;
+  box-shadow: 0 0 18px #7928ff30;
+}
+
+.active .stepIcon {
+  color: white;
+  background: linear-gradient(135deg, #a52aff, #6820f5);
+  border-color: transparent;
+}
+
+.active .stepInfo span {
+  color: #c17aff;
+}
+
+.active .stepInfo h3 {
+  color: white;
+}
+
+/* Completed Step */
+
+.completed {
+  border-color: #237f64;
+  background: #10251f;
+}
+
+.completed .stepIcon {
+  color: #061d15;
+  background: #20d99a;
+  border-color: #20d99a;
+}
+
+.completed .stepInfo span {
+  color: #36dca4;
+}
+
+.completed .stepInfo h3 {
+  color: white;
+}
+
+.completedCheck {
+  margin-left: auto;
+  color: #20d99a;
+  flex-shrink: 0;
+}
+
+/* Connector */
+
+.connector {
+  display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .wizard {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .wizard {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    min-height: 68px;
+  }
+}

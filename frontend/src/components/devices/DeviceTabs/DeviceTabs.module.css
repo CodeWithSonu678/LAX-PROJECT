@@ -1,0 +1,40 @@
+.tabsContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0 22px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabsContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  min-width: 118px;
+  padding: 11px 20px;
+
+  color: #c0bfd1;
+  background: #111124;
+
+  border: 1px solid #24243e;
+  border-radius: 30px;
+
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  transition: 0.3s;
+}
+
+.tab:hover {
+  border-color: #7928ff;
+}
+
+.activeTab {
+  color: #fff;
+  background: linear-gradient(110deg, #7928ff, #9d55ff);
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(121, 40, 255, 0.25);
+}

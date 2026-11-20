@@ -1,0 +1,337 @@
+.downloadCard {
+  min-height: 255px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 26px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 80% 60%,
+      rgba(92, 29, 177, 0.19),
+      transparent 45%
+    ),
+    #111123;
+
+  border: 1px solid #39245f;
+  border-radius: 17px;
+}
+
+/* Content */
+
+.content {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 750;
+}
+
+.description {
+  color: #b3b1cb;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* OS Options */
+
+.osOptions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.osCard {
+  min-width: 155px;
+  height: 68px;
+  padding: 10px 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  position: relative;
+  color: #d6d3e8;
+  background: #1a1933;
+  border: 1px solid #30274f;
+  border-radius: 14px;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.osCard:hover:not(:disabled) {
+  border-color: #9b4dff;
+}
+
+.selected {
+  border: 1.5px solid #b04fff;
+  background: linear-gradient(120deg, #291344, #19132e);
+  box-shadow: 0 0 16px rgba(143, 47, 255, 0.22);
+}
+
+.disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.osInfo {
+  text-align: left;
+}
+
+.osInfo h3 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.osInfo span {
+  display: block;
+  margin-top: 5px;
+  color: #a7a3c1;
+  font-size: 10px;
+}
+
+/* Windows Logo */
+
+.windowsIcon {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3px;
+  transform: skewY(-5deg);
+  flex-shrink: 0;
+}
+
+.windowsIcon span {
+  background: #a879ff;
+}
+
+.selectedCheck {
+  position: absolute;
+  top: -8px;
+  right: -7px;
+
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+
+  background: #fff;
+  color: #7928ff;
+  border-radius: 50%;
+}
+
+/* Download Actions */
+
+.downloadActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 21px;
+}
+
+.downloadButton {
+  min-width: 290px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  color: #fff;
+  background: linear-gradient(110deg, #a326ff, #6820f5);
+  border: none;
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: 0 0 18px rgba(121, 40, 255, 0.3);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.downloadButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(121, 40, 255, 0.5);
+}
+
+.versionInfo {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 16px;
+
+  color: #e3dff5;
+  background: #1a1933;
+  border: 1px solid #352b57;
+  border-radius: 25px;
+  font-size: 12px;
+}
+
+.versionInfo i {
+  width: 1px;
+  height: 17px;
+  background: #62557f;
+}
+
+/* Software Illustration */
+
+.visual {
+  width: 230px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.glow {
+  position: absolute;
+  width: 180px;
+  height: 35px;
+  bottom: 22px;
+  background: #7928ff;
+  filter: blur(35px);
+  opacity: 0.7;
+}
+
+.softwareBox {
+  width: 125px;
+  height: 195px;
+  position: relative;
+  z-index: 1;
+
+  background: linear-gradient(
+    145deg,
+    #35116e,
+    #170d32 60%,
+    #42127c
+  );
+
+  border: 1.5px solid #a95cff;
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 18px rgba(139, 48, 255, 0.55),
+    inset 0 0 20px rgba(138, 48, 255, 0.16);
+
+  transform: perspective(600px) rotateY(-9deg);
+}
+
+.softwareBox::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: -15px;
+  width: 14px;
+  height: calc(100% - 14px);
+
+  background: linear-gradient(180deg, #6322a9, #210c45);
+  border: 1px solid #873aff;
+  transform: skewY(35deg);
+  transform-origin: left;
+}
+
+.boxContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 35px;
+}
+
+.laxLogo {
+  color: #bc70ff;
+  font-size: 39px;
+  line-height: 1;
+}
+
+.boxContent h3 {
+  margin-top: 5px;
+  color: white;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.boxContent > span {
+  margin-top: 2px;
+  color: #e3d5ff;
+  font-size: 10px;
+}
+
+.boxContent .windowsIcon {
+  margin-top: 23px;
+}
+
+.platform {
+  position: absolute;
+  bottom: 17px;
+  width: 195px;
+  height: 23px;
+  display: grid;
+  place-items: center;
+  color: #b779ff;
+
+  border: 1.5px solid #a54bff;
+  border-radius: 50%;
+
+  box-shadow: 0 0 15px #7928ff;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .visual {
+    width: 170px;
+  }
+
+  .osOptions {
+    gap: 9px;
+  }
+
+  .osCard {
+    min-width: 135px;
+    padding: 9px;
+  }
+
+  .downloadButton {
+    min-width: 235px;
+  }
+}
+
+@media (max-width: 750px) {
+  .downloadCard {
+    padding: 20px;
+  }
+
+  .visual {
+    display: none;
+  }
+
+  .osOptions {
+    flex-wrap: wrap;
+  }
+
+  .downloadActions {
+    flex-wrap: wrap;
+  }
+
+  .downloadButton {
+    width: 100%;
+  }
+}

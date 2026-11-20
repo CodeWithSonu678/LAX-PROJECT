@@ -1,0 +1,134 @@
+.container,
+.section {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.heading h2 {
+  color: #fff;
+  font-size: 22px;
+}
+
+.heading p {
+  margin-top: 7px;
+  color: #9292a9;
+  font-size: 13px;
+}
+
+.section {
+  padding: 23px;
+  background: #111124;
+  border: 1px solid #24243e;
+  border-radius: 15px;
+}
+
+.section h3 {
+  margin-bottom: 15px;
+  color: #a56aff;
+  font-size: 15px;
+}
+
+.settingRow {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #25253d;
+}
+
+.settingRow:last-child {
+  border-bottom: none;
+}
+
+.settingInfo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #a56aff;
+}
+
+.settingInfo span {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+}
+
+.settingInfo small {
+  display: block;
+  margin-top: 5px;
+  color: #9292a9;
+  font-size: 11px;
+}
+
+.textInput,
+.settingRow select {
+  width: 220px;
+  padding: 11px;
+  color: #fff;
+  background: #090912;
+  border: 1px solid #292541;
+  border-radius: 8px;
+  outline: none;
+}
+
+.settingRow select option {
+  background: #111124;
+}
+
+.settingRow input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #7928ff;
+  cursor: pointer;
+}
+
+.rangeControl {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rangeControl input {
+  accent-color: #914cff;
+}
+
+.rangeControl span {
+  color: #a56aff;
+  font-size: 12px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 23px;
+  color: #fff;
+  background: linear-gradient(120deg, #7928ff, #a04dff);
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .settingRow {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px 0;
+  }
+
+  .textInput,
+  .settingRow select {
+    width: 100%;
+  }
+}

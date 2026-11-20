@@ -1,0 +1,178 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Device Label */
+
+.deviceLabel {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  min-height: 210px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  padding: 25px 20px;
+
+  background: linear-gradient(145deg, #252536, #11111d);
+  border: 2px solid #9b4cff;
+  border-radius: 25px;
+
+  box-shadow:
+    0 0 12px #a855f755,
+    0 0 35px #8b5cf633,
+    inset 0 0 20px #a855f715;
+}
+
+/* Screws */
+
+.screw {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle at 35% 30%, #55556a, #090910);
+  border: 1px solid #55556a;
+}
+
+.topLeft {
+  top: 12px;
+  left: 12px;
+}
+
+.topRight {
+  top: 12px;
+  right: 12px;
+}
+
+.bottomLeft {
+  bottom: 12px;
+  left: 12px;
+}
+
+.bottomRight {
+  bottom: 12px;
+  right: 12px;
+}
+
+/* Brand */
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.brand svg {
+  color: #a855f7;
+}
+
+/* Label Details */
+
+.labelDetails {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  padding: 12px 10px;
+
+  background: #10101c;
+  border: 1px solid #9b65e9;
+  border-radius: 10px;
+}
+
+.detailsText {
+  min-width: 0;
+}
+
+.detailsText p {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  color: #c5c1d9;
+  font-size: 9px;
+  margin: 0 0 9px;
+}
+
+.detailsText p:last-child {
+  margin-bottom: 0;
+}
+
+.detailsText strong {
+  color: white;
+  font-size: 10px;
+  letter-spacing: 0.3px;
+}
+
+.qrCode {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+/* Info Card */
+
+.infoCard {
+  width: 100%;
+  max-width: 320px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 17px;
+
+  background: #1b1630;
+  border: 1px solid #57358c;
+  border-radius: 13px;
+}
+
+.infoIcon {
+  flex-shrink: 0;
+  color: #c16aff;
+}
+
+.infoCard h4 {
+  margin: 0 0 8px;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.infoCard p {
+  margin: 0;
+
+  color: #b8b1d0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .deviceLabel {
+    max-width: 100%;
+  }
+
+  .infoCard {
+    max-width: 100%;
+  }
+}

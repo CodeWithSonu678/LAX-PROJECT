@@ -1,0 +1,95 @@
+.deviceHeader {
+  min-height: 165px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  padding: 20px 30px;
+
+  background: linear-gradient(120deg, #111124, #0c0c19);
+  border: 1px solid #24243e;
+  border-radius: 17px;
+}
+
+.deviceImage {
+  width: 210px;
+  height: 190px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.deviceImage canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.deviceDetails h2 {
+  font-size: 27px;
+}
+
+.deviceDetails p {
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.status {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 13px;
+  padding: 6px 12px;
+
+  color: #18d995;
+  background: rgba(24, 217, 149, 0.13);
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  background: #18d995;
+  border-radius: 50%;
+}
+
+.moreButton {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #aaa9c0;
+  background: #19192e;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .deviceHeader {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .deviceImage {
+    width: 90px;
+    height: 105px;
+  }
+
+  .deviceDetails h2 {
+    font-size: 19px;
+  }
+}

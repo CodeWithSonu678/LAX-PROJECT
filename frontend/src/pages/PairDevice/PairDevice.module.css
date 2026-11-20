@@ -1,0 +1,111 @@
+.container {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #9292ad;
+  font-size: 13px;
+}
+
+.separator {
+  color: #686881;
+  font-size: 19px;
+}
+
+.breadcrumb strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Pairing Workspace */
+
+.workspace {
+  width: 100%;
+  flex: 1;
+  min-height: 540px;
+
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 20px;
+
+  padding: 22px;
+
+  background: #100f20;
+  border: 1px solid #30234e;
+  border-radius: 20px;
+}
+
+/* Left Steps Panel */
+
+.stepsPanel {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+}
+
+/* Right Content Panel */
+
+.content {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: stretch;
+}
+
+.content > * {
+  width: 100%;
+  max-width: none;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .workspace {
+    grid-template-columns: 240px minmax(0, 1fr);
+    padding: 16px;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 16px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 14px;
+  }
+
+  .stepsPanel {
+    height: auto;
+  }
+
+  .content {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .workspace {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+  }
+}

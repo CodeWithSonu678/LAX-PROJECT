@@ -1,0 +1,165 @@
+.section {
+    position: relative;
+    width: 100%;
+    padding: 100px 3%;
+
+    overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.connector {
+
+
+    position: absolute;
+    top: 50%;
+    right: -22px;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #bd83ff;
+    background: #17102b;
+
+    border: 1px solid rgba(147, 51, 234, 0.45);
+    border-radius: 50%;
+}
+
+.header {
+    max-width: 650px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+
+    color: #bd83ff;
+    background: rgba(126, 34, 206, 0.13);
+
+    border: 1px solid rgba(147, 51, 234, 0.25);
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.header h2 {
+    margin-top: 22px;
+
+    color: #ffffff;
+    font-size: clamp(32px, 4vw, 44px);
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+.header h2 span {
+    color: #a855f7;
+}
+
+.header p {
+    margin-top: 17px;
+
+    color: #a5a3b8;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 60px;
+}
+
+.stepItem {
+    position: relative;
+    min-width: 0;
+}
+
+.connector {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translate(50%, -50%);
+
+    z-index: 2;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #bd83ff;
+    background: #17102b;
+
+    border: 1px solid rgba(147, 51, 234, 0.35);
+    border-radius: 50%;
+}
+
+.bottomNote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 45px;
+
+    color: #c7b3e8;
+    font-size: 13px;
+}
+
+.noteIcon {
+    color: #c084fc;
+    display: flex;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+    .stepsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .connector {
+        display: none;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .section {
+        padding: 70px 5%;
+    }
+
+    .stepsGrid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .bottomNote {
+        text-align: center;
+        font-size: 12px;
+    }
+}

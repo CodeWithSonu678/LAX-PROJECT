@@ -1,0 +1,116 @@
+.healthCard {
+  min-width: 0;
+  min-height: 250px;
+  padding: 20px;
+  background: linear-gradient(135deg, #111124, #0d0d1b);
+  border: 1px solid #24243e;
+  border-radius: 16px;
+}
+
+.healthCard h2 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.healthContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  min-height: 230px;
+}
+
+/* Health Circle */
+
+.healthCircle {
+  width: 145px;
+  height: 145px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #18d995 var(--health),
+    #20243b 0
+  );
+
+  position: relative;
+}
+
+.healthCircle::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  background: #111124;
+  border-radius: 50%;
+}
+
+.circleInner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.circleInner h3 {
+  color: #fff;
+  font-size: 27px;
+}
+
+.circleInner span {
+  display: block;
+  margin-top: 7px;
+  color: #9292a9;
+  font-size: 11px;
+}
+
+/* Health List */
+
+.healthList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.healthItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.healthName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #18d995;
+  font-size: 15px;
+}
+
+.healthName svg {
+  width: 20px;
+  height: 20px;
+}
+
+.healthStatus svg {
+  width: 21px;
+  height: 21px;
+}
+
+/* Responsive */
+
+@media (max-width: 550px) {
+  .healthContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .healthList {
+    width: 100%;
+  }
+}

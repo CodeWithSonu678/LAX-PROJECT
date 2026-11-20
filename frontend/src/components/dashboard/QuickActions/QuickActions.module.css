@@ -1,0 +1,50 @@
+.actionsCard {
+  min-width: 0;
+  padding: 22px;
+  background: linear-gradient(135deg, #111124, #0d0d1b);
+  border: 1px solid #24243e;
+  border-radius: 16px;
+}
+
+.actionsCard h2 {
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.actionList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.actionButton {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 13px;
+  color: #c5b5ff;
+  background: #191932;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.actionButton:hover {
+  background: #27164b;
+  border-color: #7928ff;
+}
+
+.actionButton span {
+  flex: 1;
+  text-align: left;
+  color: #e0ddec;
+  font-size: 12px;
+}
+
+.arrow {
+  color: #aaa9c0;
+}

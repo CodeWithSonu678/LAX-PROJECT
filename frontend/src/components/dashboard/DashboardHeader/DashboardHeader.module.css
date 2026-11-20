@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.heading h1 {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.heading p {
+  margin-top: 8px;
+  color: #9292a9;
+  font-size: 13px;
+}
+
+.notificationButton {
+  width: 42px;
+  height: 42px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4b4ff;
+  background: #151329;
+  border: 1px solid #292541;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.notificationButton:hover {
+  background: #241448;
+  border-color: #7928ff;
+}
+
+.notificationDot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background: #e85aff;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  .heading h1 {
+    font-size: 23px;
+  }
+
+  .heading p {
+    max-width: 260px;
+    line-height: 1.6;
+  }
+}

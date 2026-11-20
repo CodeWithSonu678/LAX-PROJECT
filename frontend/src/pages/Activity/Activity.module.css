@@ -1,0 +1,260 @@
+.container {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding: 10px 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  color: #ffffff;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.header h1 {
+  margin: 0 0 7px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header p {
+  margin: 0;
+  color: #9693ae;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Filter */
+
+.filterWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.filterButton {
+  min-width: 130px;
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  color: #ffffff;
+  background: #17162a;
+  border: 1px solid #30264f;
+  border-radius: 10px;
+
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.filterButton:hover {
+  border-color: #8b5cf6;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+
+/* Dropdown */
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 20;
+
+  width: 170px;
+  padding: 6px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  background: #171529;
+  border: 1px solid #393052;
+  border-radius: 10px;
+
+  box-shadow: 0 10px 30px #00000055;
+}
+
+.dropdown button {
+  padding: 10px 12px;
+  text-align: left;
+
+  color: #b8b4cb;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown button:hover,
+.dropdown button.selected {
+  color: #ffffff;
+  background: #482080;
+}
+
+/* Activity Card */
+
+.activityCard {
+  width: 100%;
+  overflow: hidden;
+
+  background: #111123;
+  border: 1px solid #292542;
+  border-radius: 16px;
+}
+
+/* Activity Item */
+
+.activityItem {
+  min-height: 74px;
+  padding: 13px 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  border-bottom: 1px solid #25233b;
+  transition: background 0.2s;
+}
+
+.activityItem:last-child {
+  border-bottom: none;
+}
+
+.activityItem:hover {
+  background: #19172d;
+}
+
+/* Icon */
+
+.activityIcon {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  color: #ffffff;
+  border-radius: 11px;
+}
+
+.purple {
+  background: linear-gradient(135deg, #57218e, #34105e);
+}
+
+.blue {
+  background: linear-gradient(135deg, #243d9b, #151f63);
+}
+
+/* Activity Info */
+
+.activityInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.activityInfo h3 {
+  margin: 0;
+  color: #e9e7f1;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Time */
+
+.activityTime {
+  flex-shrink: 0;
+  color: #9692ad;
+  font-size: 11px;
+}
+
+/* Empty State */
+
+.emptyState {
+  min-height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #9b73df;
+  text-align: center;
+}
+
+.emptyState h3 {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 15px 0 5px;
+}
+
+.emptyState p {
+  color: #9693ae;
+  font-size: 12px;
+}
+
+/* Footer */
+
+.footer {
+  color: #77738e;
+  font-size: 11px;
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .header h1 {
+    font-size: 23px;
+  }
+
+  .filterWrapper,
+  .filterButton {
+    width: 100%;
+  }
+
+  .activityItem {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .activityInfo h3 {
+    font-size: 12px;
+  }
+
+  .activityTime {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 400px) {
+  .activityItem {
+    flex-wrap: wrap;
+  }
+
+  .activityTime {
+    margin-left: 49px;
+  }
+}

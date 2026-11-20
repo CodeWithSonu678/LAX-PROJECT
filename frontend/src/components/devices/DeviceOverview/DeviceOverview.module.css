@@ -1,0 +1,93 @@
+.overviewGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.infoCard {
+  min-width: 0;
+  min-height: clamp(200px, 24vh, 250px);
+
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(145deg, #111725, #0c1020);
+  border: 1px solid #202b43;
+  border-radius: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #18d995;
+}
+
+.cardHeader h3 {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.infoCard h2 {
+  margin-top: 25px;
+  color: #fff;
+  font-size: 38px;
+}
+
+.infoCard h4 {
+  margin-top: 35px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 15px;
+  margin-top: 17px;
+
+  background: #1a2940;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.batteryProgress {
+  height: 100%;
+  background: #18d995;
+  border-radius: 20px;
+}
+
+.storageProgress {
+  height: 100%;
+  background: #7928ff;
+  border-radius: 20px;
+}
+
+.networkStatus {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 15px;
+  color: #18d995;
+  font-size: 12px;
+}
+
+.storageText {
+  margin-top: 5px;
+  color: #9292a9;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .overviewGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .overviewGrid {
+    grid-template-columns: 1fr;
+  }
+}

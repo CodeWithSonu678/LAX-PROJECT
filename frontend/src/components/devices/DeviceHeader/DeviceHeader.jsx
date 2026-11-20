@@ -1,5 +1,5 @@
 import { MoreHorizontal, Wifi } from "lucide-react";
-import DeviceModel from "../../home/Hero/components/DeviceShowcase/DeviceModel";
+import DeviceModel from "../../Home/Hero/components/DeviceShowcase/DeviceModel";
 
 import styles from "./DeviceHeader.module.css";
 

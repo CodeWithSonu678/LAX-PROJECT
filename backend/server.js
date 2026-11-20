@@ -41,7 +41,7 @@ server.on("upgrade", async (request, socket, head) => {
   });
 
   try {
-    const url = new URL(request.url, "http://localhost");
+    const url = new URL(request.url, "http://localhost", "https://lax-agent.vercel.app");
 
     if (url.pathname !== "/agent") {
       socket.write("HTTP/1.1 404 Not Found\r\nConnection: close\r\n\r\n");
